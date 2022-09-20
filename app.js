@@ -43,7 +43,7 @@ app.use(expressSanitizer());
 
 // Passport Configuration
 app.use(require("express-session")({
-	secret: "Victory Royale and Tilted Towers",
+	secret: "******",
 	resave: false,
 	saveUninitialized: false
 }));
