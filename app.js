@@ -34,7 +34,7 @@ var app = express();
 // }, 1500000);
 
 // Uses and View Engine
-mongoose.connect("mongodb://admin:bcastudentcouncil@ds117888.mlab.com:17888/bca-stuco");
+mongoose.connect("******");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");

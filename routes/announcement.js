@@ -39,7 +39,7 @@ router.get("/announcement/all", function(req, res) {
 	Announcement.find({}).sort("-date").exec(function(err, announcements) {
 		if (err) {
 			console.log(err);
-			res.send("Error Fetching from Database - http://bcastuco.com/announcements/all - Error Code: 502 - User is " + isLoggedIn ? "Authenicated" : "NOT Authenticated" + " - Could Not Fetch Announcements from Database, Try Again Later - Please Contact alekat20@bergen.org Should the Problem Persist.");
+			res.send("Error Fetching from Database - http://bcastuco.com/announcements/all - Error Code: 502 - User is " + isLoggedIn ? "Authenicated" : "NOT Authenticated" + " - Could Not Fetch Announcements from Database, Try Again Later - Please Contact ****** Should the Problem Persist.");
 		} else {
 			announcements = announcements.sort(sortDate);
 			res.render("all-announcements", {announcements:announcements});
