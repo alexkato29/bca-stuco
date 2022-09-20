@@ -1,0 +1,12 @@
+<% include partials/header2 %>
+
+
+
+<h1 class='black'>All Minutes</h1>
+<% minutes.forEach(function(minute) { %>
+<a href='/minutes/show/<%= minute._id %>' class='minute-date'><div class='minute-date black'><%= minute.date %></div></a>
+<% }); %>
+
+
+
+<% include partials/footer %>

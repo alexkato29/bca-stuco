@@ -1,0 +1,86 @@
+<% include partials/header %>
+
+
+
+<div class='page1 container section'>
+	<h1 class='main-text'>BCA STUDENT COUNCIL</h1>
+	<div><a href="/ideas/new" id='share-ideas' class="btn animated-button thar-two">Share Your Ideas</a></div>
+	<i class="fa fa-angle-double-down arrow-down fa-3x" aria-hidden="true"></i>
+</div>
+
+<div class='page2 container section'>
+	<div class='opacity-container'>
+		<h2 class='main-text'>WHO ARE WE?</h2>
+		<p>Representing all grades, all academies, and all backgrounds, the BCA Student Council is proud to be the driving force behind change and improvement within the BCA community. With 2018 rapidly flying by, we are working everyday to meet the goals that we set out for ourselves as to represent you, the student body, in the best manner possible. From getting involved in local activism initiatives, preparing for a BCA pep-rally, to working with administration on a day to day basis, we are here to make an impact.</p>
+		<br>
+		<p>Student Council meets every Monday morning at 7:30 in Mr Zhang’s room (room 141). Feel welcome to attend and voice any and all concerns for us to begin working on immediately. Together we are stronger, we love you BCA.</p>
+		<div id='meet-reps'><a href="/reps" id='meet-reps-btn' class="btn animated-button thar-two">Meet The Reps</a></div>
+	</div>
+</div>
+
+<div class='page3 container section'>
+	<h2 class='main-text black'>ANNOUNCEMENTS</h2>
+	<div class='all-announcements'>
+	<% announcements.forEach(function(announcement) {
+		if (announcementCount < 3) { %>
+		<div class='announcement-container <%= announcementCount===0?"first": announcementCount === 2 ? "alast" : "" %>'>
+			<div class='annoucnement-date-wrapper'><h3 class='announcement-date'><%= announcement.date %></h3></div>
+			<h3 class='announcement-subject'><%= announcement.subject %></h3>
+			<p class='announcement-content'><%= announcement.content.substring(0, 400) %> <% if (announcement.content.length > 400) { %>
+				... <a href='/announcement/show/<%= announcement._id %>'><span class='read-more'>Read More</span></a></p> 
+			<% } %>
+		</div>
+		<% } announcementCount++;
+		}); %>
+	</div>
+	<a href='/announcement/all'><h4 class='show-all'>Show All</h4></a>
+</div>
+
+
+
+
+<div class='page4 container section'>
+	<div class='big-bar'>
+		<h2 class='main-text'>PHOTOS</h2>
+	</div>
+	<a href='https://photos.app.goo.gl/KYcXeUE3S7XdLDJEA' target='_blank'>
+		<div class='images-container'>
+			<img class='photo-img' src='/images/fd2019.jpg'>
+			<h3 class='center-button underline' id='photo-name' class='first'>View STUCO's Photos</h3>
+		</div>
+	</a>
+		
+</div>
+
+
+
+
+
+<!-- <div class='page5 container section'>
+	<div class='minute-wrapper'>
+		<h2 class='main-text black'>OUR MEETINGS</h2>
+		<% minutes.forEach(function(minute) {
+		if (minuteCount >= 2 && minuteCount < 4) { %>
+		<div class='meeting-container last'>
+			<h3 class='date'><%= minute.date %></h3>
+			<p class='minute'><%= minute.content.substring(0, 158) %>... <a href='/minutes/show/<%= minute._id %>'><span class='read-more'>Read More</span></a></p>
+		</div>
+		<% } else if (minuteCount < 4) { %>
+			<div class='meeting-container'>
+				<h3 class='date'><%= minute.date %></h3>
+				<p class='minute'><%= minute.content.substring(0, 158) %>... <a href='/minutes/show/<%= minute._id %>'><span class='read-more'>Read More</span></a></p>
+			</div>
+		<% }
+		minuteCount++;
+		}); %>
+	</div>
+	<a href='/minutes/all'><h4 class='show-all'>Show All</h4></a>
+</div> -->
+	
+
+</div>
+</div>
+
+
+
+<% include partials/footer %>

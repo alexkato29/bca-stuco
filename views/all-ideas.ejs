@@ -1,0 +1,12 @@
+<% include partials/header2 %>
+
+
+
+<h1 class='black'>All Feedback</h1>
+<% ideas.forEach(function(idea) { %>
+<a href='/ideas/show/<%= idea._id %>' class='minute-date'><div class='minute-date black'><%= idea.subject %></div></a>
+<% }); %>
+
+
+
+<% include partials/footer %>

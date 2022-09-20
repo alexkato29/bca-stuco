@@ -1,0 +1,14 @@
+<% include partials/header2 %>
+
+
+
+<form class='dark' action="/minutes/new" method='POST'>
+	<input class='minute-input' type='text' name='date' placeholder="Date in this exact format: '4 April 2020' (Capitals and Everything.)">
+	<textarea class='minute-input' placeholder="Minute" name="minute"></textarea>
+	<input type='checkbox' name='admin'><label id='admin-label'>Admin Meeting</label>
+    <button class='minute-input'>Post</button>
+</form>
+
+
+
+<% include partials/footer %>

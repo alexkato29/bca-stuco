@@ -1,0 +1,24 @@
+<% include partials/header3 %>
+
+<div class='feedback'>
+	<div class='feedback-box'>
+		<div class='black-box'>
+			<h2>SHARE YOUR IDEAS</h2>
+			<p id='feedback-desc'>We’re constantly working to represent the student body.  If you have any ideas, questions for us or the administration, or concerns, feel free to let us know here!</p>
+		</div>
+		<form action="/ideas/new" method='POST'>
+			<input class='text-input' type="text" name="name" placeholder="Name">
+			<input class='text-input' type='text' name='email' placeholder="Bergen Email">
+			<input class='text-input' type="text" name="subject" placeholder="Subject">
+			<textarea class='text-input' id='message-input' placeholder="Message" name="feedback"></textarea>
+		    <button class='form-submit'>Share</button>
+		    <input class='checkbox' type='checkbox' name='anonymous'>
+		    <p id='check-label' class='black'>I prefer to be anonymous *</p>
+			<p id='warning-thing' class='black'>* By checking off this box, Student Council is guaranteeing your name will be kept secret should your concerns be brought up with a different party</p>
+		</form>
+	</div>
+</div>
+
+
+
+<% include partials/footer %>

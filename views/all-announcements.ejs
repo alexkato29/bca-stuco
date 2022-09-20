@@ -1,0 +1,12 @@
+<% include partials/header2 %>
+
+
+
+<h1 class='black'>All Announcements</h1>
+<% announcements.forEach(function(announcement) { %>
+<a href='/announcement/show/<%= announcement._id %>' class='minute-date'><div class='minute-date black'><%= announcement.date %></div></a>
+<% }); %>
+
+
+
+<% include partials/footer %>

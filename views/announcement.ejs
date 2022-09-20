@@ -1,0 +1,14 @@
+<% include partials/header2 %>
+
+
+
+<form class='dark' action="/announcement/new" method='POST'>
+	<input class='minute-input' type='text' name='date' placeholder="Relavent date in this exact format: 'April 4th, 2020'">
+	<input class='minute-input' type='text' placeholder="Subject" name="subject"></input>
+	<textarea class='minute-input' placeholder="Content" name="content"></textarea>
+    <button>Post</button>
+</form>
+
+
+
+<% include partials/footer %>
